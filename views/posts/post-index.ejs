@@ -1,6 +1,12 @@
-<% posts.forEach(function (post){ %>
-    <div>
-        <p><%=post.title%></p>
-        <p><%=post.body%></p>
-    </div>
-<% }) %>
+<% include ../partials/boilerplate %>
+
+<div class="contain">
+	<ol>
+		<% posts.forEach(post => { %>
+			<li><dt class="title"><%=post.title%></dt>
+			<span class="body"><%=post.body%></span></li>
+		<% }) %>
+	</ol>
+</div>
+
+<% include ../partials/end%>
